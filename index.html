@@ -30,17 +30,17 @@
     
     <div ng-init="
       customers=[
-        { name: 'Igor Entaltsev',
-          age: '39'
+        { cst_name: 'Igor Entaltsev',
+          cst_age: '39'
         },
-        { name: 'Jenica Entaltseva',
-          age: '37'
+        { cst_name: 'Jenica Entaltseva',
+          cst_age: '37'
         },
-        { name: 'Daniel Entaltsev',
-          age: '16'
+        { cst_name: 'Daniel Entaltsev',
+          cst_age: '16'
         },
-        { name: 'Joy Entaltseva',
-          age: '13'
+        { cst_name: 'Joy Entaltseva',
+          cst_age: '13'
         }
       ]
          ">
@@ -51,8 +51,9 @@
         ng-model="customer"/>
       
       <ul>
-        <li ng-repeat="c in customers | filter:customer">
-          {{ c.name }} - {{ c.age }}
+        <li ng-repeat="c in customers | filter:customer
+                                      | orderBy: 'cst_age' ">
+          {{ c.cst_name }} - {{ c.cst_age }}
         </li>      
       </ul>
     </div>
