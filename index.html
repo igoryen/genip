@@ -49,9 +49,9 @@
       <input
         type="text"
         ng-model="customer"/>
-      {{ customer }}
+      
       <ul>
-        <li ng-repeat="c in customers">
+        <li ng-repeat="c in customers | filter:customer">
           {{ c.name }} - {{ c.age }}
         </li>      
       </ul>
