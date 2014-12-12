@@ -26,6 +26,37 @@
       </ul>
     </div>
     
+    <hr>
+    
+    <div ng-init="
+      customers=[
+        { name: 'Igor Entaltsev',
+          age: '39'
+        },
+        { name: 'Jenica Entaltseva',
+          age: '37'
+        },
+        { name: 'Daniel Entaltsev',
+          age: '16'
+        },
+        { name: 'Joy Entaltseva',
+          age: '13'
+        }
+      ]
+         ">
+      Customer:
+      <br>
+      <input
+        type="text"
+        ng-model="customer"/>
+      {{ customer }}
+      <ul>
+        <li ng-repeat="c in customers">
+          {{ c.name }} - {{ c.age }}
+        </li>      
+      </ul>
+    </div>
+    
     <script src="angular.min.js">
     </script>
   </body>
